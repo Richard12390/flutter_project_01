@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'bottom_bar.dart';
+import 'bottom_bar.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -14,11 +16,20 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text("Stock Life"),
       ),
-      body: Center(
-          child: ListView.builder(
-        itemCount: list__view.length,
-        itemBuilder: context(),
-      )),
+      // backgroundColor: ,
+      body: Column(
+        children: [
+          Expanded(child: <Widget>children)
+            
+          )
+        ],
+      )
+
+      //     ListView.builder(
+      //   itemCount: list__view.length,
+      //   itemBuilder: context(),
+      // )
+      ,
       floatingActionButton: TextButton(
         onPressed: () {
           setState(() {});
@@ -27,3 +38,47 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
+
+
+
+
+
+
+// children: [
+//           ElevatedButton(
+//             onPressed: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(builder: (content) => Page1()),
+//               );
+//             },
+//             child: Text("Page1"),
+//           ),
+//           ElevatedButton(
+//             onPressed: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(builder: (content) => Page2()),
+//               );
+//             },
+//             child: Text("Page2"),
+//           ),
+//           ElevatedButton(
+//             onPressed: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(builder: (content) => Page3()),
+//               );
+//             },
+//             child: Text("Page3"),
+//           ),
+//           ElevatedButton(
+//             onPressed: () {
+//               Navigator.push(
+//                 context,
+//                 MaterialPageRoute(builder: (content) => Page4()),
+//               );
+//             },
+//             child: Text("Page4"),
+//           ),
+//         ],
