@@ -1,0 +1,88 @@
+{
+  "name": "",
+  "css_prefix_text": "",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "026007bd17bfc67f3fe013199676f620",
+      "css": "dollar",
+      "code": 61781,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "513ac180ff85bd275f2b736720cbbf5e",
+      "css": "home",
+      "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "8b477a390fca32fdefa0ca0c1f280ba5",
+      "css": "format_list_bulleted",
+      "code": 59393,
+      "src": "material"
+    },
+    {
+      "uid": "2b6e439ba053332e05a6d9b9f9944f44",
+      "css": "earth",
+      "code": 59475,
+      "src": "linearicons"
+    },
+    {
+      "uid": "24f6c08bd38dc0e137e4b1b98d7d24e2",
+      "css": "add_circle_outline",
+      "code": 59394,
+      "src": "material"
+    },
+    {
+      "uid": "41a48eecc95e7f6cf8bb4820dc99d2f3",
+      "css": "file_download",
+      "code": 59395,
+      "src": "material"
+    },
+    {
+      "uid": "a869aa5b1f1d3dadfdf39d9222c6e122",
+      "css": "trending_up",
+      "code": 59396,
+      "src": "material"
+    },
+    {
+      "uid": "5387667811a68af841f122838f9df499",
+      "css": "featured_play_list",
+      "code": 59397,
+      "src": "material"
+    },
+    {
+      "uid": "382b348b55b46ba96df46ebd0fa91454",
+      "css": "featured_video",
+      "code": 59398,
+      "src": "material"
+    },
+    {
+      "uid": "de03ebf92b076a74a8575293118942f2",
+      "css": "assessment",
+      "code": 59399,
+      "src": "material"
+    },
+    {
+      "uid": "4fe434d1e9790de98db338048055f24c",
+      "css": "assignment",
+      "code": 59400,
+      "src": "material"
+    },
+    {
+      "uid": "95a2fdabfd0fda1494f0282a885bbb8c",
+      "css": "shop",
+      "code": 59401,
+      "src": "material"
+    },
+    {
+      "uid": "8663320a860b00f26e94d3d15c9ba99a",
+      "css": "clock",
+      "code": 59402,
+      "src": "entypo"
+    }
+  ]
+}
