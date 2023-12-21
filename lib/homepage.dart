@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main.dart';
-import 'bottom_bar.dart';
+import 'secondpage.dart';
 
 import 'tabIcons.dart';
 
@@ -16,17 +15,17 @@ class _HomePageState extends State<HomePage> {
 
   final tabIcon = <Widget>[
     const Icon(MyFlutterApp.trending_up,
-        size: 80, color: Color.fromARGB(255, 45, 143, 223)),
+        size: 60, color: Color.fromARGB(255, 45, 143, 223)),
     const Icon(MyFlutterApp.featured_play_list,
-        size: 80, color: Color.fromARGB(255, 45, 143, 223)),
+        size: 60, color: Color.fromARGB(255, 45, 143, 223)),
     const Icon(MyFlutterApp.featured_video,
-        size: 80, color: Color.fromARGB(255, 45, 143, 223)),
+        size: 60, color: Color.fromARGB(255, 45, 143, 223)),
     const Icon(MyFlutterApp.assessment,
-        size: 80, color: Color.fromARGB(255, 45, 143, 223)),
+        size: 60, color: Color.fromARGB(255, 45, 143, 223)),
     const Icon(MyFlutterApp.clock,
-        size: 80, color: Color.fromARGB(255, 45, 143, 223)),
+        size: 60, color: Color.fromARGB(255, 45, 143, 223)),
     const Icon(MyFlutterApp.add_circle_outline,
-        size: 80, color: Color.fromARGB(255, 45, 143, 223)),
+        size: 60, color: Color.fromARGB(255, 45, 143, 223)),
 
     // const Icon(MyFlutterApp.file_download),
     // const Icon(MyFlutterApp.format_list_bulleted),
@@ -45,6 +44,8 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        // leading: ,
+        // backgroundColor: Colors.white,
         title: Text("Stock Sardin Search"),
       ),
       // backgroundColor: ,
@@ -59,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                 'Drawer Header',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 26,
                 ),
               ),
             ),
@@ -79,61 +80,66 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
 
-      body: Column(
-        children: [
-          // getAPP(),
-          Expanded(
-            child: Container(
-                height: MediaQuery.of(context).size.height,
-                child: Padding(
-                  padding: EdgeInsets.only(
-                    top: 5,
-                    left: 5,
-                    right: 5,
-                  ),
-                  child: GridView(
-                      children: List.generate(
-                        tabIcon.length,
-                        (index) {
-                          return Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(0),
-                                  border: Border.all(
-                                      strokeAlign: BorderSide.strokeAlignCenter,
-                                      width: 10,
-                                      color:
-                                          Color.fromARGB(200, 112, 96, 255))),
-                              child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    tabIcon[index],
-                                    // color: Colors.blue[200],
-                                    // size: 80,
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        top: 20,
-                                      ),
-                                    ),
-                                    Text("${tabIconTitle[index]}",
-                                        style: TextStyle(
-                                            color: Color.fromARGB(
-                                                255, 45, 143, 223),
-                                            fontSize: 20,
-                                            fontWeight: FontWeight.bold))
-                                  ]));
-                        },
-                      ),
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
-                        // mainAxisSpacing: 8.0,
-                        // crossAxisSpacing: 8.0,
-                        childAspectRatio: 1.0,
-                      )),
-                )),
+      body: Container(
+          // decoration: Color.fromARGB(200, 112, 96, 255),
+          decoration: BoxDecoration(
+            color: Colors.blue,
+            // border: Border.all(
+            //   color: Colors.blue,
+            //   width: 10,
           ),
-        ],
-      ),
+          height: MediaQuery.of(context).size.height,
+          child: Padding(
+            padding: EdgeInsets.only(top: 5, left: 5, right: 5, bottom: 5),
+            child: GridView(
+                children: List.generate(
+                  tabIcon.length,
+                  (index) {
+                    return Container(
+                        decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(0),
+                            border: Border.all(
+                                // strokeAlign: BorderSide.strokeAlignCenter,
+                                // width: 2.5,
+                                // color: Color.fromARGB(200, 112, 96, 255)
+                                )),
+                        child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => Screener(),
+                                ),
+                              );
+                            },
+                            child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  tabIcon[index],
+                                  // color: Colors.blue[200],
+                                  // size: 80,
+                                  Padding(
+                                    padding: EdgeInsets.symmetric(
+                                        horizontal: 12, vertical: 12),
+                                  ),
+                                  Text("${tabIconTitle[index]}",
+                                      style: TextStyle(
+                                          color:
+                                              Color.fromARGB(255, 45, 143, 223),
+                                          fontSize: 22,
+                                          fontWeight: FontWeight.bold))
+                                ])));
+                  },
+                ),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  mainAxisSpacing: 5,
+                  crossAxisSpacing: 5,
+                  childAspectRatio: 1.0,
+                )),
+          )),
+
       bottomNavigationBar: BottomNavigationBar(
         showSelectedLabels: false,
         showUnselectedLabels: false,
