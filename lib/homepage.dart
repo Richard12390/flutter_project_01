@@ -104,6 +104,7 @@ class _HomePageState extends State<HomePage> {
                                 // width: 2.5,
                                 // color: Color.fromARGB(200, 112, 96, 255)
                                 )),
+<<<<<<< HEAD
                         child: GestureDetector(
                             onTap: () {
                               Navigator.push(
@@ -134,6 +135,28 @@ class _HomePageState extends State<HomePage> {
                 ),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
+=======
+                        child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              tabIcon[index],
+                              // color: Colors.blue[200],
+                              // size: 80,
+                              Padding(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 8, vertical: 8),
+                              ),
+                              Text("${tabIconTitle[index]}",
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 45, 143, 223),
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold))
+                            ]));
+                  },
+                ),
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 3,
+>>>>>>> f2654e746aae760966ae9ea26089785f439c636f
                   mainAxisSpacing: 5,
                   crossAxisSpacing: 5,
                   childAspectRatio: 1.0,
